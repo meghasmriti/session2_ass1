@@ -1,0 +1,35 @@
+task1
+
+17/03/06 00:57:06 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[root@mesmriti workspace]# echo $?
+1
+[root@mesmriti workspace]# hadoop fs -mkdir /user/acadgild
+17/03/06 00:57:24 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mkdir: `/user/acadgild': No such file or directory
+[root@mesmriti workspace]# hadoop fs -mkdir /user
+17/03/06 00:57:43 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[root@mesmriti workspace]# hadoop fs -mkdir /user/acadgild
+17/03/06 00:57:51 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[root@mesmriti workspace]# hadoop fs -test -d /user/acadgild
+17/03/06 00:58:01 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[root@mesmriti workspace]# echo $?
+0
+
+
+task 2
+
+[root@mesmriti workspace]# hadoop fs -appendToFile - /user/acadgild/wordcount.txt
+17/03/06 01:07:46 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+my name id megha smriti. I work for IBM
+a
+sads
+ds
+^C[root@mesmriti workspace]# hadoop fs -cat /user/acadgild/wordcount.txt
+17/03/06 01:09:11 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+my name id megha smriti. I work for IBM
+a
+sads
+ds
+[root@mesmriti workspace]# 
+
+
